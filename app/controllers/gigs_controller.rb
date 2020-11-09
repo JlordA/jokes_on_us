@@ -1,4 +1,9 @@
 class GigsController < ApplicationController
+
+    def index 
+        @gigs = Gig.all
+    end 
+
     def new
         @gig = Gig.new
     end
@@ -23,7 +28,7 @@ class GigsController < ApplicationController
     private
 
     def gig_params
-        params.require(:gig).permit(:club, :user, :date, :price)
+        params.require(:gig).permit(:club_id, :user_id, :date, :price)
     end
     
 

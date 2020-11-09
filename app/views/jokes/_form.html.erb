@@ -1,0 +1,20 @@
+<% if flash[:my_errors] %>
+    <% flash[:my_errors].each do |error| %>
+        <p><%= error %></p>
+        <% end %>
+    <% end %>
+
+<%= form_for(@joke) do |f| %>
+    <%= f.label :user_id %><br>
+    <%= f.collection_select :user_id, User.all, :id, :name %><br>
+
+    <%= f.hidden_field :like, value: 0 %>
+    <%= f.hidden_field :dislike, value: 0 %>
+   <!-- <%= f.hidden_field :user, value: @joke.user %> --> 
+    <label>Content:</label><br>
+    <%= f.text_field :content %><br>
+    
+   
+    
+    <%= f.submit %>
+  <% end %>

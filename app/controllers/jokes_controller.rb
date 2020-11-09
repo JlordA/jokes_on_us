@@ -1,4 +1,9 @@
 class JokesController < ApplicationController
+
+    def index 
+        @jokes = Joke.all
+    end 
+
     def new
         @joke = Joke.new
     end
@@ -11,6 +16,8 @@ class JokesController < ApplicationController
             flash[:my_errors] = @joke.errors.full_messages
             redirect_to new_joke_path
         end
+       
+        
     end
 
     def show
@@ -23,7 +30,7 @@ class JokesController < ApplicationController
     private
 
     def joke_params
-        params.require(:joke).permit(:user, :like, :dislike, :content)
+        params.require(:joke).permit(:user_id, :like, :dislike, :content)
     end
     
 end
