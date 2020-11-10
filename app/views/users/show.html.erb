@@ -8,6 +8,18 @@
     
 
     <p  style="text-align:center"> <img  src=<%= @user.pic%> height="500"></p>
+<h3 style="text-align:center">Jokes :</h3>
+<div>
+    <% @user.jokes.each do |joke| %>
+    <p style="text-align:center"><%= joke.content %></li>
+
+    <% end %>
+
+</div>
+
+
+<h3 style="text-align:center"> Create a New Joke <%= render partial: "jokes/form" %></h3>
+
 
 
 

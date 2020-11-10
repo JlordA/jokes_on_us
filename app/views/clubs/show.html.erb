@@ -1,8 +1,8 @@
 <h1 style="text-align:center"><%= @club.name %></h1>
 
 
-<p style="text-align:center">Address: <%= @club.address %></p>
-<p style="text-align:center">Description: <%= @club.description %></p>
+<p style="text-align:center"><b>Address: </b><%= @club.address %></p>
+<p style="text-align:center"><b>Description: </b><%= @club.description %></p>
     
 <p  style="text-align:center"> <img  src=<%= @club.pic%> height="500"></p>
 
@@ -10,11 +10,16 @@
 <h3 style="text-align:center">Reviews </h3>
 
 <% @club.reviews.each do |review| %><br>
-    <p style="text-align:center">Rating : <%= review.rating %> star<br>
-    <p style="text-align:center">Content : <%= review.content %><br>
+    <p style="text-align:center" > <b>Rating : </b> <%= review.rating %> star<br>
+    <p style="text-align:center"><b>Content : </b><%= review.content %><br>
     <p style="text-align:center"> <%= review.date.strftime ('%B %-d, %Y') %><br>
 <% end %>
 
+<br>
+
+<div  style="text-align:center">
+   <b> <%=  button_to 'Add review', new_review_path %></b>
+</div>
 
 
 

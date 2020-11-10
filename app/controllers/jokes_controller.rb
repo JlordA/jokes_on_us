@@ -6,6 +6,7 @@ class JokesController < ApplicationController
 
     def new
         @joke = Joke.new
+
     end
 
     def create

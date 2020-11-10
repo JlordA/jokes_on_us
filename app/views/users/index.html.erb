@@ -5,7 +5,10 @@
 <div>
     <% @users.each do |user| %>
 
-        <p style="text-align: center"><%= link_to user.name, user_path(user) %>
-        <p style="text-align: center"><%= image_tag user.pic %>
+        <p style="text-align: center"><%= link_to user.name, user_path(user) %></p>
+        
+        <p style="text-align: center"> <%= link_to(image_tag(user.pic), user_path(user)) %></p>
     <% end %>
  </div>
+
+ 

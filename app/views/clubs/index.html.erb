@@ -1,10 +1,11 @@
 <h1>Clubs</h1>
 
-<ul>
+
+
+ <div>
     <% @clubs.each do |club| %>
-      
-        <li><%= link_to club.name, club_path(club) %></li>
-        
-      
+
+        <p style="text-align: center"><%= link_to club.name, club_path(club) %>
+        <p style="text-align: center"><%= image_tag club.pic %>
     <% end %>
- </ul>
+ </div>
