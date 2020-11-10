@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_09_191503) do
+ActiveRecord::Schema.define(version: 2020_11_10_191844) do
 
   create_table "clubs", force: :cascade do |t|
     t.string "name"
@@ -54,15 +54,16 @@ ActiveRecord::Schema.define(version: 2020_11_09_191503) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "user_name"
     t.string "name"
     t.string "email"
     t.string "pic"
     t.text "bio"
     t.integer "age"
-    t.string "password"
     t.string "hometown"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "password_digest"
   end
 
   add_foreign_key "gigs", "clubs"

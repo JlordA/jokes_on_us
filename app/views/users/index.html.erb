@@ -1,12 +1,11 @@
-<h1>Users</h1>
+<h1 style="text-align: center">Users</h1>
 
 
 
-<ul>
+<div>
     <% @users.each do |user| %>
-      
-        <li><%= link_to user.name, user_path(user) %></li>
-        
-      
+
+        <p style="text-align: center"><%= link_to user.name, user_path(user) %>
+        <p style="text-align: center"><%= image_tag user.pic %>
     <% end %>
- </ul>
+ </div>

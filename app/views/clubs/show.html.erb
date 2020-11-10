@@ -12,7 +12,7 @@
 <% @club.reviews.each do |review| %><br>
     <p style="text-align:center">Rating : <%= review.rating %> star<br>
     <p style="text-align:center">Content : <%= review.content %><br>
-    <p style="text-align:center"> <%= review.date %><br>
+    <p style="text-align:center"> <%= review.date.strftime ('%B %-d, %Y') %><br>
 <% end %>
 
 

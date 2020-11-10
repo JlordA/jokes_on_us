@@ -3,7 +3,7 @@
 <ul>
     <% @reviews.each do |review| %>
       
-        <li><%= review.club.name %>,  Rating: <%= review.rating %>, Content: <%= review.content%>, Date: <%= review.date %></li>
+        <li><%= review.club.name %>,  Rating: <%= review.rating %>, Content: <%= review.content%>, Date: <%= review.date.strftime ('%B %-d, %Y') %></li>
         
     <% end %>
  </ul>
