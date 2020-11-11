@@ -1,10 +1,10 @@
 <h1 style="text-align:center"><%= @user.name %></h1>
 
 
-    <p style="text-align:center">Email: <%= @user.email %></p>
-    <p style="text-align:center">Age: <%= @user.age %></p>
-    <p style="text-align:center">Hometown: <%= @user.hometown %></p>
-    <p style="text-align:center">Bio: <%= @user.bio %></p>
+    <p style="text-align:center"><b>Email: </b><%= @user.email %></p>
+    <p style="text-align:center"><b>Age: </b><%= @user.age %></p>
+    <p style="text-align:center"><b>Hometown: </b><%= @user.hometown %></p>
+    <p style="text-align:center"><b>Bio: </b><%= @user.bio %></p>
     
 
     <p  style="text-align:center"> <img  src=<%= @user.pic%> height="500"></p>
@@ -17,9 +17,11 @@
 
 </div>
 
-
-<h3 style="text-align:center"> Create a New Joke <%= render partial: "jokes/form" %></h3>
-
+<div>
+<% if session[:user_id] == @user.id %>
+    <h3 style="text-align:center"> Create a New Joke <%= render partial: "jokes/form" %></h3>
+<% end %>
+</div>
 
 
 

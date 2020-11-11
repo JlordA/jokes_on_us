@@ -10,6 +10,7 @@ class ReviewsController < ApplicationController
 
     def create
         @review = Review.create(review_params)
+        # if session[:user_id] == @user.id 
         if @review.valid?
             redirect_to club_path(@review.club)
         else 

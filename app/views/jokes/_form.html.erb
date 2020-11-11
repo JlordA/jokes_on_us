@@ -8,11 +8,8 @@
 
 <div style="text-align: center">
 <%= form_for(@joke) do |f| %>
-    
-    
 
-    <%= f.hidden_field :user_id, value: session[:user_id] %><br>
-
+    <%= f.hidden_field :user_id, value: @user.id %><br>
     <%= f.hidden_field :like, value: 0 %>
     <%= f.hidden_field :dislike, value: 0 %>
     <label>Content:</label><br>

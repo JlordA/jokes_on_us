@@ -23,8 +23,6 @@ class GigsController < ApplicationController
     end
 
     
-
-
     private
 
     def gig_params

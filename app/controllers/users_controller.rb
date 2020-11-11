@@ -5,9 +5,14 @@ class UsersController < ApplicationController
     end 
     
     def show
-    
         @user = User.find(params[:id])
         @joke = Joke.new
+        # if @joke.valid?
+        #     redirect_to user_path(@user)
+        # else
+        #     flash[:my_errors] = @user.errors.full_messages
+        #     redirect_to user_path(@user)
+        # end
     end 
 
     

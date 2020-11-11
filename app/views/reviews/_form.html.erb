@@ -9,11 +9,8 @@
 <div  style="text-align: center">
 <%= form_for(@review) do |f| %>
 
-    <%= f.label :club %><br>
-    <%= f.collection_select :club_id, Club.all, :id, :name %><br>
+    <%= f.hidden_field :club_id, value: @club.id %><br>
     
-
-
     <%= f.label :rating %><br>
     <%= f.number_field :rating %><br>
 

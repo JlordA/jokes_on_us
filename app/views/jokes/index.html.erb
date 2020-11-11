@@ -3,7 +3,7 @@
 <div>
     <% @jokes.each do |joke| %>
       
-        <p style="text-align: center"> <%= joke.content%><br>Likes: <%= joke.like %> <br>-<%= link_to joke.user.name, user_path(joke.user) %> </p>
+        <p style="text-align: center"> <%= joke.content%>  - <%= link_to joke.user.name, user_path(joke.user) %></b>  <b>Likes: </b><%= joke.like %> <b>Dislikes: </b><%= joke.dislike %></p>
         
       
     <% end %>
