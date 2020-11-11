@@ -8,8 +8,10 @@
     
 
     <p  style="text-align:center"> <img  src=<%= @user.pic%> height="500"></p>
+
 <h3 style="text-align:center">Jokes :</h3>
-<h3 style="text-align:center">Most Liked Joke : <%= @user.featured_jokes.content %></h3>
+
+
 <div>
 
     <% @user.jokes.each do |joke| %>

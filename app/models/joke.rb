@@ -3,8 +3,8 @@ class Joke < ApplicationRecord
   validates :content, presence: true
 
   
-  def sorted_jokes
-    test = Joke.sort_by {|joke|joke.like}.reverse
-end
+  # def sorted_jokes
+  #   test = Joke.sort_by {|joke|joke.like}.reverse
+  # end
   
 end
