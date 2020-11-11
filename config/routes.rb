@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :reviews
+  resources :reviews, except: [:destroy, :edit, :update]
   resources :gigs
-  resources :clubs
-  resources :jokes
-  resources :users
+  resources :clubs, except: [:destroy]
+  resources :jokes, except: [:destroy, :edit, :update]
+  resources :users, except: [:destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root to: "users#index"
