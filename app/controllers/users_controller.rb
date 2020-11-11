@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     
     def show
         @user = User.find(params[:id])
+        
         @joke = Joke.new
         # if @joke.valid?
         #     redirect_to user_path(@user)

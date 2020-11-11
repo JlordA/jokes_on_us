@@ -61,6 +61,11 @@
   }
 
   .profile-pic img {
-    max-width: 300px;
-  max-height: 200px;
+    max-width: 400px;
+    max-height: 300px;
   }
+
+  .center {
+    width: 50%;
+    margin: 0 auto;
+}

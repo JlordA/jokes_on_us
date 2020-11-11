@@ -11,7 +11,14 @@
 <h3 style="text-align:center">Jokes :</h3>
 <div>
     <% @user.jokes.each do |joke| %>
-    <p style="text-align:center"><%= joke.content %></li>
+    
+    <div style="text-align:center"><%= joke.content %> </div>
+
+     
+     
+    
+   <div style="text-align:center"><%= button_to "Like", joke_path(joke), method: :patch %></div>
+    
 
     <% end %>
 
