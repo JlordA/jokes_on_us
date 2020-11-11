@@ -23,7 +23,7 @@
       <li><%= link_to "Top Jokes", jokes_path %></li>
 
       <% if @current_user %>
-        <b><li style="color:white;" class="right">Hello <%= @current_user.name %> </li></b>
+        <b><li style="color:white;" class="right">Hello <%= link_to @current_user.name, user_path(@current_user) %> </li></b>
         <li class="right"><%= link_to "Log Out", logout_path, method: :delete %></li>
       <% else %>
         <li class="right"><%= link_to "Login", new_login_path %></li>
@@ -34,3 +34,5 @@
     <%= yield %>
   </body>
 </html>
+
+<%= @current_user.name %> 
