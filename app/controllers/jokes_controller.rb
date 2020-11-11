@@ -18,49 +18,49 @@ class JokesController < ApplicationController
             redirect_to new_joke_path
         end
     end
-
+    
+    
     def show
+        @sorted_jokes = Joke.sorted_jokes
         @joke = Joke.find(params[:id])
     end
-
+    
     def edit
         # render :show
         @joke = Joke.find(params[:id])
     end
-
-
+    
+    
     def update
         @joke = Joke.find(params[:id])
         @joke.update(joke_params)
         redirect_to user_path(@joke.user)
     end
-
-
+    
+    
     def like 
         @joke = Joke.find(params[:id])
-        @joke.likes += 1
+        @joke.like += 1
         @joke.save
-        redirect_to user_path(@joke.user_id)
+        redirect_back fallback_location: jokes_path
+        
+        
     end
-
-    def save
-        @joke = Joke.find(params[:id])
-        @joke.likes += 1
-        @joke.update(joke_params)
-    end
-
+    
+    
     def dislike 
         @joke = Joke.find(params[:id])
-        @joke.dislikes += 1
+        @joke.dislike += 1
         @joke.save
-        redirect_to user_path(@joke.user_id)
+        redirect_back fallback_location: jokes_path
+        
     end
-
     
-
-
+    
+    
+    
     private
-
+    
     def joke_params
         params.require(:joke).permit(:user_id, :like, :dislike, :content)
     end

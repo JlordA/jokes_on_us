@@ -9,16 +9,19 @@
 
     <p  style="text-align:center"> <img  src=<%= @user.pic%> height="500"></p>
 <h3 style="text-align:center">Jokes :</h3>
+<h3 style="text-align:center">Most Liked Joke : <%= @user.featured_jokes.content %></h3>
 <div>
+
     <% @user.jokes.each do |joke| %>
     
-    <div style="text-align:center"><%= joke.content %> </div>
+    <div style="text-align:center"><%= joke.content %>
+    <br> Likes : <%= joke.like%> Dislikes : <%= joke.dislike%> <%= button_to "👍", like_path(joke), method: :patch %>
+        <%= button_to "👎", dislike_path(joke), method: :patch %> </div><br>
+    
+        
 
      
      
-    
-   <div style="text-align:center"><%= button_to "Like", joke_path(joke), method: :patch %></div>
-    
 
     <% end %>
 

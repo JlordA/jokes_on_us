@@ -1,0 +1,14 @@
+<h1 style="text-align:center">Author<%= @joke.user.name %></h1>
+
+
+    <p style="text-align:center"><b>Conte: </b><%= @joke.content %></p>
+    <p style="text-align:center"><b>Likes: </b><%= @joke.like %></p>
+    <p style="text-align:center"><b>Dislike: </b><%= @joke.dislike %></p>
+
+    <div style="text-align: center"><%= button_to "👍", {:controller => :jokes, :action => :like}, { :method => :patch } %></div>
+
+     <div style="text-align: center"><%= button_to "👎", {:controller => :jokes, :action => :like}, { :method => :patch } %></div>
+    
+    
+
+

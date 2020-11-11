@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :clubs, except: [:destroy]
   resources :jokes
   resources :users
-  resources :users
+ 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root to: "users#index"
@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create', as: 'login'
 
   patch "/jokes/:id/like", to: "jokes#like", as: "like"
+  patch "/jokes/:id/dislike", to: "jokes#dislike", as: "dislike"
   
+
 
   
   
