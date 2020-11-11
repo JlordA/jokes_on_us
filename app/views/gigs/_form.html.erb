@@ -1,14 +1,18 @@
+<div  style="text-align: center">
 <% if flash[:my_errors] %>
     <% flash[:my_errors].each do |error| %>
         <p><%= error %></p>
         <% end %>
     <% end %>
+</div>
+
 <div style="text-align: center">
 
 
 <%= form_for(@gig) do |f| %>
     <%= f.label :club %><br>
     <%= f.collection_select :club_id, Club.all, :id, :name %><br>
+    <%= f.hidden_field  %>
 
     <%= f.hidden_field :user_id, value: session[:user_id] %><br>
 

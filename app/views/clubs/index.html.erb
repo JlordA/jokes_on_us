@@ -1,4 +1,4 @@
-<h1>Clubs</h1>
+<h1 style="text-align:center">Clubs</h1>
 
 
 
@@ -6,6 +6,6 @@
     <% @clubs.each do |club| %>
 
         <p style="text-align: center"><%= link_to club.name, club_path(club) %>
-        <p style="text-align: center"><%= image_tag club.pic %>
+        <p style="text-align: center"> <%= link_to(image_tag(club.pic), club_path(club)) %></p>
     <% end %>
  </div>

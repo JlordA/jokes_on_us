@@ -1,15 +1,17 @@
+<div  style="text-align: center">
 <% if flash[:my_errors] %>
     <% flash[:my_errors].each do |error| %>
         <p><%= error %></p>
         <% end %>
     <% end %>
+</div>
 
 <div style="text-align: center">
 <%= form_for(@joke) do |f| %>
     
     
 
-   <%= f.hidden_field :user_id, value: session[:user_id] %><br>
+    <%= f.hidden_field :user_id, value: session[:user_id] %><br>
 
     <%= f.hidden_field :like, value: 0 %>
     <%= f.hidden_field :dislike, value: 0 %>
