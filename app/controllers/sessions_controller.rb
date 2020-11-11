@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 #     # session[:page_count] = nil 
 #     session.delete(:page_count)
 
-#     redirect_back fallback_location: cats_path
+#     redirect_back fallback_location: users_path
 #   end
 
     def logout 
@@ -15,7 +15,9 @@ class SessionsController < ApplicationController
         redirect_to users_path
     end 
 
-    def new 
+    def new
+         
+        
     end 
 
     def create 

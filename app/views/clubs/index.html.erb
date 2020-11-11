@@ -4,7 +4,7 @@
 
  <div>
     <% @clubs.each do |club| %>
-        <p style="text-align: center"> <%= link_to(image_tag(club.pic), club_path(club)) %></p>
+        <p class="profile-pic" style="text-align: center"> <%= link_to(image_tag(club.pic), club_path(club)) %></p>
         <p style="text-align: center"><%= link_to club.name, club_path(club) %>
         <h3 style="text-align: center">. . .</h3>
     <% end %>
