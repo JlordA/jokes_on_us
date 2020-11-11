@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :reviews, except: [:destroy, :edit, :update]
+  resources :reviews, except: [:destroy, :edit, :update,:show]
   resources :gigs
   resources :clubs, except: [:destroy]
-  resources :jokes, except: [:destroy, :edit, :update]
+  resources :jokes, except: [:destroy, :edit, :update,:show]
   resources :users, except: [:destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
