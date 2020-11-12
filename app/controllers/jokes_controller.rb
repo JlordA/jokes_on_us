@@ -9,12 +9,13 @@ class JokesController < ApplicationController
     end
 
     def create
+        @user = session[:user_id]
         @joke = Joke.create(joke_params)
         if @joke.valid?
             redirect_to user_path(@joke.user)
         else 
-            flash[:my_errors] = @joke.errors.full_messages
-            redirect_to new_joke_path
+            flash[:joke_errors] = @joke.errors.full_messages
+            redirect_to user_path(@user)
         end
     end
     

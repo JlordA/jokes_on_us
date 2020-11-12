@@ -1,6 +1,6 @@
 <div  style="text-align: center">
-<% if flash[:my_errors] %>
-    <% flash[:my_errors].each do |error| %>
+<% if flash[:gig_errors] %>
+    <% flash[:gig_errors].each do |error| %>
         <p><%= error %></p>
         <% end %>
     <% end %>
@@ -25,7 +25,6 @@
 
     <br>
     
-    
-    <%= f.submit %>
+    <%= f.submit "Book A Gig" %>
 <% end %>
 </div>

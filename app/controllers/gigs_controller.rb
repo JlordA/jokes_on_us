@@ -16,8 +16,8 @@ class GigsController < ApplicationController
         if @gig.valid?
             redirect_to club_path(@gig.club)
         else
-            flash[:my_errors] = @gig.errors.full_messages
-            redirect_to new_gig_path
+            flash[:gig_errors] = @gig.errors.full_messages
+            redirect_back fallback_location: user_path(@user)
         end
     end
 

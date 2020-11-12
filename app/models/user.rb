@@ -15,4 +15,8 @@ class User < ApplicationRecord
         self.gigs.sort_by {|gig| gig.date}
     end
 
+    def dogshit_joke
+        test = self.jokes.max_by {|joke| joke.dislike}
+    end
+
 end
