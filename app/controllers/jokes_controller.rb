@@ -43,8 +43,6 @@ class JokesController < ApplicationController
         @joke.like += 1
         @joke.save
         redirect_back fallback_location: jokes_path
-        
-        
     end
     
     
@@ -55,9 +53,6 @@ class JokesController < ApplicationController
         redirect_back fallback_location: jokes_path
         
     end
-    
-    
-    
     
     private
     

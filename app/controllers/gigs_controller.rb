@@ -9,6 +9,9 @@ class GigsController < ApplicationController
     end
 
     def create
+        # byebug
+        # if session[:user_id].featured_jokes.likes >= @gig.club.req_likes
+        @user = session[:user_id]
         @gig = Gig.create(gig_params)
         if @gig.valid?
             redirect_to user_path(@gig.user)

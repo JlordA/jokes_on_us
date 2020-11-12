@@ -1,6 +1,6 @@
 class Joke < ApplicationRecord
   belongs_to :user
-  validates :content, presence: true
+  validates :content, :user_id, presence: true
 
   
   # def sorted_jokes
