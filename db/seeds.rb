@@ -107,17 +107,17 @@ Club.create!(name: "Comedy Cellar", address:"117 MacDougal St, New York, NY 1001
 Club.create!(name: "Laugh Factory", address:"8001 Sunset Blvd, Los Angeles, CA 90046", pic: "https://img.grouponcdn.com/deal/c28fdf8b213a4a338c5d47dec5144f2f/2f/v1/c700x420.jpg", description: "Best Comedy Spot In LA", req_likes: 40)
 Club.create!(name: "Life Care Center - Old Folks Home", address:Faker::Address.full_address, pic: "https://lh3.googleusercontent.com/proxy/Jck4TW1zJWkQ0vWL4UzWpwYj_3c113U-zSgHpnMDRhrDxP1Xb4vCMwkq5RGa8Ud6_FOwZi3CCr3yXEdPI5nTBGDA7J4Jm8z1j-W9ZJa7tKTFnvyekgEzSwpSMnubV0tv7Dm4qj_T4A", description: "The Worst Kept Secret for a reason", req_likes: 1)
 
-puts "seeding gigs"
+# puts "seeding gigs"
 
-Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
 
 
 puts "Done seeding"

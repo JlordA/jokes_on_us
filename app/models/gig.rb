@@ -11,4 +11,5 @@ class Gig < ApplicationRecord
       self.errors.add(:user_id, "Not Funny Enough for This Club")
     end
   end
+
 end

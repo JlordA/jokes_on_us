@@ -6,7 +6,6 @@ class JokesController < ApplicationController
 
     def new
         @joke = Joke.new
-
     end
 
     def create
@@ -19,7 +18,6 @@ class JokesController < ApplicationController
         end
     end
     
-    
     def show
         @sorted_jokes = Joke.sorted_jokes
         @joke = Joke.find(params[:id])
@@ -30,13 +28,11 @@ class JokesController < ApplicationController
         @joke = Joke.find(params[:id])
     end
     
-    
     def update
         @joke = Joke.find(params[:id])
         @joke.update(joke_params)
         redirect_to user_path(@joke.user)
     end
-    
     
     def like 
         @joke = Joke.find(params[:id])
@@ -45,13 +41,11 @@ class JokesController < ApplicationController
         redirect_back fallback_location: jokes_path
     end
     
-    
     def dislike 
         @joke = Joke.find(params[:id])
         @joke.dislike += 1
         @joke.save
         redirect_back fallback_location: jokes_path
-        
     end
     
     private

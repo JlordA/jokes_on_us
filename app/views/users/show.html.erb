@@ -9,9 +9,15 @@
 
     <p  style="text-align:center"> <img  src=<%= @user.pic%> height="500"></p>
 
+<div>
+<% if session[:user_id] == @user.id %>
+    <h3 style="text-align:center"><%= link_to 'Edit Profile', edit_user_path(@user) %>
+    <h3 style="text-align:center"> Create a New Joke <%= render partial: "jokes/form" %></h3>
+    <h3 style="text-align:center"> Book A Gig <%= render partial: "gigs/form" %></h3>
+<% end %>
+</div>
+
 <h3 style="text-align:center">Jokes :</h3>
-
-
 <div>
 
     <% @user.jokes.each do |joke| %>
@@ -19,21 +25,16 @@
     <div style="text-align:center"><%= joke.content %>
     <br> Likes : <%= joke.like%> Dislikes : <%= joke.dislike%> <%= button_to "👍", like_path(joke), method: :patch %>
         <%= button_to "👎", dislike_path(joke), method: :patch %> </div><br>
-    
-        
-
-     
-     
-
     <% end %>
 
 </div>
 
-<div>
-<% if session[:user_id] == @user.id %>
-    <h3 style="text-align:center"> Create a New Joke <%= render partial: "jokes/form" %></h3>
-<% end %>
-</div>
 
+<div style="text-align:center">
+<h3> Upcoming Gigs : </h3>
+    <% @user.upcoming_gigs.each do |gig| %>
+        <p style="text-align:center"><b><%= gig.club.name %></b> - Date : <%= gig.date.strftime ('%B %-d, %Y') %></p>
+    <% end%>
+</div>
 
 

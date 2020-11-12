@@ -10,9 +10,15 @@
 <h3 style="text-align:center">Reviews </h3>
 
 <% @club.reviews.each do |review| %><br>
-    <p style="text-align:center" > <b>Rating : </b> <%= review.rating %> star<br>
+    <p style="text-align:center"><b>Rating : </b> <%= review.rating %> star<br>
     <p style="text-align:center"><b>Content : </b><%= review.content %><br>
-    <p style="text-align:center"> <%= review.date.strftime ('%B %-d, %Y') %><br>
+    <p style="text-align:center"><b>Date : <%= review.date.strftime ('%B %-d, %Y') %><br>
+<% end %>
+
+<% @club.gigs.each do |gig| %><br>
+    <p style="text-align:center"><b>Performing : </b> <%= gig.user.name %><br>
+    <p style="text-align:center"><b>Price : </b>$<%= gig.price %><br>
+    <p style="text-align:center"><b>Date : <%= gig.date.strftime ('%B %-d, %Y') %><br>
 <% end %>
 
 <br>

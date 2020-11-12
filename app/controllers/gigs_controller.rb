@@ -14,8 +14,8 @@ class GigsController < ApplicationController
         @user = session[:user_id]
         @gig = Gig.create(gig_params)
         if @gig.valid?
-            redirect_to user_path(@gig.user)
-        else 
+            redirect_to club_path(@gig.club)
+        else
             flash[:my_errors] = @gig.errors.full_messages
             redirect_to new_gig_path
         end

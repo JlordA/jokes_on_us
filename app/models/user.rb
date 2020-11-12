@@ -8,9 +8,11 @@ class User < ApplicationRecord
     has_secure_password
 
     def featured_jokes
-        
         test = self.jokes.max_by {|joke| joke.like}
     end
 
-    
+    def upcoming_gigs
+        self.gigs.sort_by {|gig| gig.date}
+    end
+
 end
