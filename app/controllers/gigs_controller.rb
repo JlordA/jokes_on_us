@@ -25,9 +25,14 @@ class GigsController < ApplicationController
         @gig = Gig.find(params[:id])
     end
 
+    def destroy
+        @user = session[:user_id]
+        @gig = Gig.find(params[:id])
+        @gig.destroy
+        redirect_to user_path(@user)
+    end
     
     private
-
     def gig_params
         params.require(:gig).permit(:club_id, :user_id, :date, :price)
     end

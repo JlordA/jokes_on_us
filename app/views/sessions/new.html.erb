@@ -1,3 +1,10 @@
+<div  style="text-align: center">
+<% if flash[:error] %>
+      <%= flash[:error] %>
+    <% end %>
+</div>
+
+
 <h1 style="text-align: center"> User Login </h1>
 <div style="text-align: center">
   <%= form_for :session, url: login_path do |f| %>

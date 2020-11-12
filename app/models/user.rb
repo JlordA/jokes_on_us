@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-    has_many :jokes
-    has_many :gigs
+    has_many :jokes, dependent: :destroy
+    has_many :gigs, dependent: :destroy
     has_many :clubs, through: :gigs
     validates :name, :age, :user_name, :email, :hometown, presence: true 
 
