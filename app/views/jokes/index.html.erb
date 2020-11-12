@@ -5,7 +5,7 @@
     <%@sorted_jokes = @jokes.sort_by {|joke|joke.like}.reverse %>
     <% @sorted_jokes.each do |joke| %>
       
-        <p style="text-align: center"> <%= link_to joke.content, joke_path(joke) %>  - <%= link_to joke.user.name, user_path(joke.user) %></b>  <b>Likes: </b><%= joke.like %> <b>Dislikes: </b><%= joke.dislike %></p>
+        <p style="text-align: center"> <%=joke.content %>  - <%= link_to joke.user.name, user_path(joke.user) %></b>  <b>Likes: </b><%= joke.like %> <b>Dislikes: </b><%= joke.dislike %></p>
 
         
 

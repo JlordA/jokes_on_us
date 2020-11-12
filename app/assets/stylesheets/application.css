@@ -61,11 +61,29 @@
   }
 
   .profile-pic img {
-    max-width: 400px;
-    max-height: 300px;
+    /* max-width: 300px; */
+    /* max-height: 300px; */
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
   }
 
   .center {
     width: 50%;
     margin: 0 auto;
-}
+  }
+
+  .container {
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 70%;
+    margin: 0px auto;
+  }
+
+  .tile {
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0px;
+    background-color: beige;
+  }

@@ -1,13 +1,18 @@
-<h1 style="text-align: center">Users</h1>
+<h1 style="text-align: center">Comedians</h1>
 
 
 
-<div>
+<div class="container">
+
     <% @users.each do |user| %>
-        <p class="profile-pic" style="text-align: center"> <%= link_to(image_tag(user.pic), user_path(user)) %></p>
-        <p style="text-align: center"><%= link_to user.name, user_path(user) %></p>
-        <h3 style="text-align: center">. . .</h3>
+        <div class="tile">
+        <p class="profile-pic"> <%= link_to(image_tag(user.pic), user_path(user)) %></p><br>
+        <p><%= link_to user.name, user_path(user) %></p>
+        
+        </div>
     <% end %>
  </div>
+
+
 
  
