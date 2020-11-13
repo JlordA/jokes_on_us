@@ -1,31 +1,36 @@
+
 <body>
-<h1 style="text-align:center"><%= @club.name %></h1>
+<div class="club_show">
+    <div class="div1_club"> 
+        <h1 style="text-align:center"><%= @club.name %></h1>
+        <div style="text-align:center"><b>Address: </b><%= @club.address %></div>
+        <div style="text-align:center"><b>Description: </b><%= @club.description %></div><br>
+        <div class="show-pic" style="text-align:center"> <img  src=<%= @club.pic%> height="500"></div>
+    </div>
 
-
-<p style="text-align:center"><b>Address: </b><%= @club.address %></p>
-<p style="text-align:center"><b>Description: </b><%= @club.description %></p>
+    <div class="div2_club"> 
+        <h4 style="text-align:center">Reviews </h4>
+        <% @club.reviews.each do |review| %>
+            <div style="text-align:center"><b>Rating : </b> <%= review.rating %> star</div>
+            <div style="text-align:center"><b>Content :</b><%= review.content %></div>
+            <div style="text-align:center"><b>Date :</b> <%= review.date.strftime ('%B %-d, %Y') %></div>
+        <% end %>
+    <h4 style="text-align:center"> Write a Review <%= render partial: "reviews/form" %></h4>
     
-<p  style="text-align:center"> <img  src=<%= @club.pic%> height="500"></p>
+    <h4 style="text-align:center">Upcoming Performances</h4>
+        <% @club.gigs.each do |gig| %>
+            <div style="text-align:center"><b>Performing : </b> <%= gig.user.name %></div>
+            <div style="text-align:center"><b>Price : $</b> <%= gig.price %></div>
+            <div style="text-align:center"><b>Date : </b> <%= gig.date.strftime ('%B %-d, %Y') %></div>
+        <% end %>
+    </div>
 
 
-<h3 style="text-align:center">Reviews </h3>
+    <div class="div3_club"style="text-align:center"> <iframe width="300" height="300" src="https://www.youtube.com/embed/QkqEf78xL-U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe></div>
+    <div class="div4_club"style="text-align:center"> <iframe src="https://giphy.com/embed/EDV30lQQ9VW5q" width="300" height="300" frameBorder="0" class="giphy-embed" ></iframe></div>
 
-<% @club.reviews.each do |review| %><br>
-    <p style="text-align:center"><b>Rating : </b> <%= review.rating %> star<br>
-    <p style="text-align:center"><b>Content : </b><%= review.content %><br>
-    <p style="text-align:center"><b>Date : <%= review.date.strftime ('%B %-d, %Y') %><br>
-<% end %>
-
-<% @club.gigs.each do |gig| %><br>
-    <p style="text-align:center"><b>Performing : </b> <%= gig.user.name %><br>
-    <p style="text-align:center"><b>Price : </b>$<%= gig.price %><br>
-    <p style="text-align:center"><b>Date : <%= gig.date.strftime ('%B %-d, %Y') %><br>
-<% end %>
-
-<br>
-
-<h3 style="text-align:center"> Write a Review <%= render partial: "reviews/form" %></h3>
 
 
 </body>
 
+</div>

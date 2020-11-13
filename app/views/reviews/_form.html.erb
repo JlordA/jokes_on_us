@@ -8,18 +8,13 @@
 
 
 <%= form_for(@review) do |f| %>
-
     <%= f.hidden_field :club_id, value: @club.id %>
-    
     <%= f.label :rating %>
     <%= f.number_field :rating %>
-
     <%= f.label :date %>
     <%= f.date_field :date %>
-
     <%= f.label :content %>
     <%= f.text_field :content %>
-    
     <%= f.submit %>
 <% end %>
 </body>

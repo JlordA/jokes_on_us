@@ -1,21 +1,17 @@
 <body>
 <div class="comedian_show">
 
-    <div class="div1_com_show">
+    <div class="div1_comedy">
         <h1 style="text-align:center"><%= @user.name %></h1>
 
             <div style="text-align:center"><b>Email: </b><%= @user.email %></div>
             <div style="text-align:center"><b>Age: </b><%= @user.age %></div>
             <div style="text-align:center"><b>Hometown: </b><%= @user.hometown %></div>
-            <div style="text-align:center"><b>Bio: </b><%= @user.bio %></div>
-            <div  style="text-align:center"> <img  src=<%= @user.pic%> height="500"></div>
-
-    
-
-    
+            <div style="text-align:center"><b>Bio: </b><%= @user.bio %></div><br>
+            <div class="show-pic" style="text-align:center"> <img  src=<%= @user.pic%> height="500"></div>
     </div>
 
-    <div class="div2_com_show center">
+    <div class="div2_comedy center">
 
         <% if session[:user_id] == @user.id %>
             <h4 style="text-align:center"><%= link_to 'Edit Profile', edit_user_path(@user) %>
@@ -38,30 +34,22 @@
             <% @user.jokes.each do |joke| %>
                 <%= joke.content %> Likes : <%= joke.like%> Dislikes : <%= joke.dislike%> <%=  button_to "👍", like_path(joke), method: :patch %>
                 <%= button_to "👎", dislike_path(joke), method: :patch %><br>
-            
             <% end %>
+        </div>
 
+        <div class="div3_comedy">
             <% if session[:user_id] == @user.id %>
             <h4 style="text-align:center"> Create a New Joke <%= render partial: "jokes/form" %></h4>
             <% end %>
+        </div>
 
-      
 
-    
+    <div class="div4_comedy"> 
+        <iframe width="300" height="300" src="https://www.youtube.com/embed/zSWUWPx2VeQ" frameborder="0" allow="accelerometer;loop=1;mute=1; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
     </div>
 
-
-
-    <div class="div3_com_show"> 
-        <iframe width="350" height="350" src="https://www.youtube.com/embed/zSWUWPx2VeQ" frameborder="0" allow="accelerometer;loop=1;mute=1; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
-    </div>
-
-
-
-    <div class="div4_com_show"> 
-    
-        <div style="width:350px;height:350px;position:relative;"><iframe src="https://giphy.com/embed/3o7TKQveWJpORTTQpa" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed"></iframe></div><p><a href="https://giphy.com/gifs/90s-football-lol-3o7TKQveWJpORTTQpa"></a></p> 
-    
+    <div class="div5_comedy"> 
+        <div style="width:300px;height:300px;position:relative;"><iframe src="https://giphy.com/embed/3o7TKQveWJpORTTQpa" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed"></iframe></div></p> 
     </div>
 
 
