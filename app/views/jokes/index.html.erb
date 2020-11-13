@@ -5,18 +5,24 @@
     <div class="div1_joke"><h1> Newest Jokes </h1>
         <%@sorted_jokes = @jokes.sort_by {|joke|joke.created_at}.reverse %>
         <% @sorted_jokes.each do |joke| %>
-            <div> <%=joke.content %>  - <%= link_to joke.user.name, user_path(joke.user) %></b>  <b>Likes: </b><%= joke.like %> <b>Dislikes: </b><%= joke.dislike %></div>
-            <%= button_to "👍", like_path(joke), method: :patch %>
-            <%= button_to "👎", dislike_path(joke), method: :patch %>
+        <div class="container">
+            <div><%= joke.content %>  - <%= link_to joke.user.name, user_path(joke.user) %>  <b>Likes: </b><%= joke.like %> <b>Dislikes: </b><%= joke.dislike %></div>
+            <div><%= button_to "👍", like_path(joke), method: :patch %></div>
+            <div><%= button_to "👎", dislike_path(joke), method: :patch %></div>
+        </div>
+        <br>
         <% end %> 
     </div>
 
     <div class="div2_joke"><h1> Most Liked Jokes </h1>
         <%@sorted_jokes = @jokes.sort_by {|joke|joke.like}.reverse %>
         <% @sorted_jokes.each do |joke| %>
-            <div> <%=joke.content %>  - <%= link_to joke.user.name, user_path(joke.user) %></b>  <b>Likes: </b><%= joke.like %> <b>Dislikes: </b><%= joke.dislike %></div>
-            <%= button_to "👍", like_path(joke), method: :patch %>
-            <%= button_to "👎", dislike_path(joke), method: :patch %>
+        <div class="container">
+            <div><%= joke.content %>  - <%= link_to joke.user.name, user_path(joke.user) %>  <b>Likes: </b><%= joke.like %> <b>Dislikes: </b><%= joke.dislike %></div>
+            <div><%= button_to "👍", like_path(joke), method: :patch %></div>
+            <div><%= button_to "👎", dislike_path(joke), method: :patch %></div>
+        </div>
+        <br>
         <% end %>
     </div>
 </div>
