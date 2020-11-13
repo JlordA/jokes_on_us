@@ -20,17 +20,17 @@
    }
   
    .banner {
-     width: 90%;
+     width: 70%;
      max-height: 200px;
      margin: 5px auto;
    }
   
   
    .nav {
-    background-color: #FD615A;
+    background-color:rgb(228 28 28 / 94%);
     
     height: 30px;
-    width: 90%;
+    width: 70%;
     margin: 0px auto;
     padding: 0px;
   }
@@ -45,7 +45,7 @@
    }
   
    .nav li:hover {
-     background-color: #F93072;
+     background-color: #ffb46d;
      transition: 1s;
    }
   
@@ -85,8 +85,9 @@
     padding: 10px;
     text-align: center;
     margin: 10px 0px;
-    background-color: beige;
+    background-color: rgb(228 28 28 / 94%);
   }
 
-
-
+  body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
