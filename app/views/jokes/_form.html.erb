@@ -1,22 +1,21 @@
-<div  style="text-align: center">
 <% if flash[:joke_errors] %>
     <% flash[:joke_errors].each do |error| %>
-        <p><%= error %></p>
-        <% end %>
+        <div style="color: red"><%= error %></div>
     <% end %>
-</div>
+<% end %>
 
-<div style="text-align: center">
+
+
 <%= form_for(@joke) do |f| %>
 
     <%= f.hidden_field :user_id, value: session[:user_id] %><br>
     <%= f.hidden_field :like, value: 0 %>
     <%= f.hidden_field :dislike, value: 0 %>
+    
     <label>Content:</label><br>
+
     <%= f.text_field :content %><br>
     
-   
-    
+
     <%= f.submit %>
-  <% end %>
-  </div>
+<% end %>
