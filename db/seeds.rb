@@ -146,4 +146,11 @@ Gig.create!(club_id: Club.all.sample.id, user_id: 8, date: "2020-11-05", price: 
 Gig.create!(club_id: Club.all.sample.id, user_id: 1, date: "2020-11-01", price: rand(5..30))
 
 
+puts "seeding Reviews"
+
+10.times do
+        
+        Review.create!(club_id: Club.all.sample.id, rating:rand(1..4), date:"2020-11-01", content:Faker::Restaurant.review )
+end
+
 puts "Done seeding"

@@ -19,7 +19,7 @@
             <h4 style="text-align:center"> Book A Gig<%= render partial: "gigs/form" %></h4>
         <% end %>
 
-
+       
         <h4 style="text-align:center"> Upcoming Gigs : </h4>
             <% @user.upcoming_gigs.each do |gig| %>
                 <div style="text-align:center"><b><%= gig.club.name %></b> - Date : <%= gig.date.strftime ('%B %-d, %Y') %></div>

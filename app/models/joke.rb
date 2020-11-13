@@ -4,7 +4,9 @@ class Joke < ApplicationRecord
 
   
   # def sorted_jokes
-  #   test = Joke.sort_by {|joke|joke.like}.reverse
+  #   self.sort_by {|joke|joke.like}.reverse
   # end
+  
+  # <%@sorted_jokes = @jokes.sort_by {|joke|joke.like}.reverse %>
   
 end
