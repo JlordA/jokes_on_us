@@ -1,24 +1,36 @@
-# README
+# Jokes On Us
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Jokes On Us.  The application is built entirly with in Ruby on Rails.  All database information can be located in the db folder including migration, seed, and schema.  Server models, controllers, and routes use restful practices.  The 'front-end' is written using Embedded Ruby (ERB) and HTML and is located in the views folder.  
 
-Things you may want to cover:
 
-* Ruby version
+## Gem files of Importance:
 
-* System dependencies
+* Ruby Rails version 6
 
-* Configuration
+* sqlite3
 
-* Database creation
+* faker
 
-* Database initialization
+## Architecture and Models
+The 5 models represented her inclued:
+* User / Club / Review / Joke
+* Gig (join table)
 
-* How to run the test suite
+## User Stories
+1. A user can book a gig
+2. A user can add a joke to the forum
+3. A user can browse and like other comedians jokes
+4. A user can sign and and delete their profile
 
-* Services (job queues, cache servers, search engines, etc.)
+![Read Me Server](app/assets/images/JokesOnUsGiphy.gif)
 
-* Deployment instructions
+## To Run
+As of the date of writing this (2/4/21) Node v14.5.0 is used as sass issues have not been resolved with current Node v15+
 
-* ...
+**Setup**
+* git clone git@github.com:JlordA/jokes_on_us.git
+* cd jokes_on_us
+* bundle install or npm install
+
+**To start the Client and Server**
+* rails s

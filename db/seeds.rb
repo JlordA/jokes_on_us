@@ -103,7 +103,7 @@ puts "seeding clubs"
 
 Club.create!(name: "Sesame Street", address:"123 Sesame Street, Brooklyn NY 11214", pic: "http://www.onthesetofnewyork.com/newsimages/sesamestreet03.jpg", description: "I can tell you how to get, how to get to Sesame Street", req_likes: 20)
 Club.create!(name: "Chilis", address:"420 Donkey Sauce Way, Los Angeles CA 90210", pic: "https://www.foodbusinessnews.net/ext/resources/FBN-Features/8/ChilisRestaurant_Lead.jpg?1534346636", description: "I want my baby back baby back baby back.... ribs", req_likes: 2)
-Club.create!(name: "Comedy Cellar", address:"117 MacDougal St, New York, NY 10012", pic: "https://theinterrobang-a.akamaihd.net/wp-content/uploads/2017/08/comedy-cellar-640x428.jpg", description: "Premier NYC Comedy Club", req_likes: 35)
+Club.create!(name: "Comedy Cellar", address:"117 MacDougal St, New York, NY 10012", pic: "https://media.timeout.com/images/100134663/630/472/image.jpg", description: "Premier NYC Comedy Club", req_likes: 35)
 Club.create!(name: "Laugh Factory", address:"8001 Sunset Blvd, Los Angeles, CA 90046", pic: "https://img.grouponcdn.com/deal/c28fdf8b213a4a338c5d47dec5144f2f/2f/v1/c700x420.jpg", description: "Best Comedy Spot In LA", req_likes: 40)
 Club.create!(name: "Life Care Center", address:Faker::Address.full_address, pic: "https://images.theconversation.com/files/330600/original/file-20200427-145508-18uj5n.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop", description: "The Worst Kept Secret for a reason", req_likes: 1)
 
