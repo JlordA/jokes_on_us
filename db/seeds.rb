@@ -97,30 +97,66 @@ User.create!(user_name:Faker::Internet.username,
 puts "seeding users"
 
 User.create!(user_name:"chrisangle", name:"Chris Angle", email:"therealchrisangle@hotmale.com", pic:"https://www.oprah.com/g/image-resizer?width=670&link=http://static.oprah.com/images/tows/200705/20070507/20070507_101_350x263.jpg", bio: "I want to ride my motorcycle up the side of the Luxor to the light and vanish.", age: 52, password: "chris_angle", hometown: "Long Island")
+
 User.create!(user_name:"fathertime",name:"Father Time", email:"elpapi@hotmale.com", pic:"https://static01.nyt.com/images/2014/11/03/multimedia/magazine-amazingrandi/magazine-amazingrandi-square640.jpg", bio: "I am the amazing randi", age: 102, password: "dandy_randy", hometown: "Kentucky")
 
 puts "seeding clubs"
 
+<<<<<<< HEAD
 Club.create!(name: "Sesame Street", address:"123 Sesame Street, Brooklyn NY 11214", pic: "http://www.onthesetofnewyork.com/newsimages/sesamestreet03.jpg", description: "I can tell you how to get, how to get to Sesame Street", req_likes: 20)
 Club.create!(name: "Chilis", address:"420 Donkey Sauce Way, Los Angeles CA 90210", pic: "https://www.foodbusinessnews.net/ext/resources/FBN-Features/8/ChilisRestaurant_Lead.jpg?1534346636", description: "I want my baby back baby back baby back.... ribs", req_likes: 2)
 Club.create!(name: "Comedy Cellar", address:"117 MacDougal St, New York, NY 10012", pic: "https://media.timeout.com/images/100134663/630/472/image.jpg", description: "Premier NYC Comedy Club", req_likes: 35)
-Club.create!(name: "Laugh Factory", address:"8001 Sunset Blvd, Los Angeles, CA 90046", pic: "https://img.grouponcdn.com/deal/c28fdf8b213a4a338c5d47dec5144f2f/2f/v1/c700x420.jpg", description: "Best Comedy Spot In LA", req_likes: 40)
+=======
 Club.create!(name: "Life Care Center", address:Faker::Address.full_address, pic: "https://images.theconversation.com/files/330600/original/file-20200427-145508-18uj5n.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop", description: "The Worst Kept Secret for a reason", req_likes: 1)
 
+Club.create!(name: "Chilis", address:"420 Donkey Sauce Way, Los Angeles CA 90210", pic: "https://www.foodbusinessnews.net/ext/resources/FBN-Features/8/ChilisRestaurant_Lead.jpg?1534346636", description: "I want my baby back baby back baby back.... ribs", req_likes: 1)
+
+Club.create!(name: "Sesame Street", address:"123 Sesame Street, Brooklyn NY 11214", pic: "http://www.onthesetofnewyork.com/newsimages/sesamestreet03.jpg", description: "I can tell you how to get, how to get to Sesame Street", req_likes: 1)
+
+
+Club.create!(name: "Comedy Cellar", address:"117 MacDougal St, New York, NY 10012", pic: "https://theinterrobang-a.akamaihd.net/wp-content/uploads/2017/08/comedy-cellar-640x428.jpg", description: "Premier NYC Comedy Club", req_likes: 35)
+
+>>>>>>> ab7b886f72a944b14c7c64bcd67d72d5e1199711
+Club.create!(name: "Laugh Factory", address:"8001 Sunset Blvd, Los Angeles, CA 90046", pic: "https://img.grouponcdn.com/deal/c28fdf8b213a4a338c5d47dec5144f2f/2f/v1/c700x420.jpg", description: "Best Comedy Spot In LA", req_likes: 40)
+
 Club.create!(name: "RNC Convention", address:Faker::Address.full_address, pic: "https://cbsnews2.cbsistatic.com/hub/i/r/2018/11/20/f71c828e-82c8-45dc-8dc9-51a64b7347c8/thumbnail/640x393/39c02153a574edf4ca6eeb3af768bcd0/gettyimages-547110672.jpg", description: "We dont take kindly to your kind around here, also here's a free gun 🔫
-", req_likes: 100)
+", req_likes: 40)
 
-# puts "seeding gigs"
+puts "seeding jokes"
 
-# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
-# Gig.create!(club_id: Club.all.sample.id, user_id: User.all.sample.id, date: Faker::Date.forward(days: 23), price: rand(5..30))
+Joke.create!(user_id: 1,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
+Joke.create!(user_id: 2,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
+Joke.create!(user_id: 3,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
+Joke.create!(user_id: 4,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
+Joke.create!(user_id: 5,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
+Joke.create!(user_id: 6,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
+Joke.create!(user_id: 7,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
+Joke.create!(user_id: 8,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
+Joke.create!(user_id: 9,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
+Joke.create!(user_id: 1,like: rand(40..50),dislike: rand(0..5),content:Faker::TvShows::FamilyGuy.quote)
 
+
+
+
+
+
+
+Gig.create!(club_id: Club.all.sample.id, user_id: 1, date: "2020-11-19", price: rand(5..30))
+Gig.create!(club_id: Club.all.sample.id, user_id: 2, date: "2020-11-19", price: rand(5..30))
+Gig.create!(club_id: Club.all.sample.id, user_id: 3, date: "2020-11-9", price: rand(5..30))
+Gig.create!(club_id: Club.all.sample.id, user_id: 4, date: "2020-11-20", price: rand(5..30))
+Gig.create!(club_id: Club.all.sample.id, user_id: 5, date: "2020-11-21", price: rand(5..30))
+Gig.create!(club_id: Club.all.sample.id, user_id: 6, date: "2020-11-10", price: rand(5..30))
+Gig.create!(club_id: Club.all.sample.id, user_id: 7, date: "2020-11-26", price: rand(5..30))
+Gig.create!(club_id: Club.all.sample.id, user_id: 8, date: "2020-11-05", price: rand(5..30))
+Gig.create!(club_id: Club.all.sample.id, user_id: 1, date: "2020-11-01", price: rand(5..30))
+
+
+puts "seeding Reviews"
+
+10.times do
+        
+        Review.create!(club_id: Club.all.sample.id, rating:rand(1..4), date:"2020-11-01", content:Faker::Restaurant.review )
+end
 
 puts "Done seeding"

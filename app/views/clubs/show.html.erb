@@ -18,10 +18,13 @@
     <h4 style="text-align:center"> Write a Review <%= render partial: "reviews/form" %></h4>
     
     <h4 style="text-align:center">Upcoming Performances</h4>
-        <% @club.gigs.each do |gig| %>
+    
+        <% @club.upcoming_gigs.each do |gig| %>
             <div style="text-align:center"><b>Performing : </b> <%= gig.user.name %></div>
             <div style="text-align:center"><b>Price : $</b> <%= gig.price %></div>
             <div style="text-align:center"><b>Date : </b> <%= gig.date.strftime ('%B %-d, %Y') %></div>
+            <br>
+
         <% end %>
     </div>
 
