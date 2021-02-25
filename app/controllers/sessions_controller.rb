@@ -2,13 +2,6 @@ class SessionsController < ApplicationController
 
     skip_before_action :authorization, only: [:new, :create]
 
-#   def page_reset
-#     # session[:page_count] = nil 
-#     session.delete(:page_count)
-
-#     redirect_back fallback_location: users_path
-#   end
-
     def logout 
         session.delete(:user_id)
         redirect_to users_path

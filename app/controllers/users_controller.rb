@@ -8,12 +8,6 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @gig = Gig.new
         @joke = Joke.new
-        # if @joke.valid?
-        #     redirect_to user_path(@user)
-        # else
-        #     flash[:my_errors] = @user.errors.full_messages
-        #     redirect_to user_path(@user)
-        # end
     end 
 
     

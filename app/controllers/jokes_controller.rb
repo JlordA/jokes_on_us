@@ -25,7 +25,6 @@ class JokesController < ApplicationController
     end
     
     def edit
-        # render :show
         @joke = Joke.find(params[:id])
     end
     
